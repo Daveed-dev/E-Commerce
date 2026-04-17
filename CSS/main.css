@@ -126,13 +126,17 @@ button {
   object-fit: cover;
   cursor: pointer;
 }
-.img-box:hover {
-  border: 2px solid hsl(26, 100%, 55%);
-  border-radius: 0.9rem;
-}
 .product-image:hover {
   opacity: 0.4;
 }
+.img-active {
+  opacity: 0.4;
+}
+.img-active-border {
+  border: 2px solid hsl(26, 100%, 55%);
+  border-radius: 0.9rem;
+}
+/* TEXT SECTION */
 .text-section {
 }
 .text-section p {
@@ -171,7 +175,9 @@ button {
 .purchase-no img {
   cursor: pointer;
 }
-
+.purchase-no img:hover {
+  opacity: 0.6;
+}
 .add-cart-btn {
   background-color: hsl(26, 100%, 55%);
   width: 16rem;
@@ -185,4 +191,7 @@ button {
 }
 .add-cart-btn img {
   height: 1rem;
+}
+.add-cart-btn:hover {
+  opacity: 0.6;
 }
