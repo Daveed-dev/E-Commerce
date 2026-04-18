@@ -90,6 +90,10 @@ button {
   border-radius: 50%;
 }
 
+/* 
+*/
+/* 
+ */
 /* Next Section */
 .product-container {
   margin: 4rem 7rem;
@@ -98,6 +102,10 @@ button {
   justify-content: space-around;
   align-items: center;
 }
+
+/* 
+Image Section
+ */
 .img-section {
   width: 23rem;
   height: 28rem;
@@ -107,6 +115,7 @@ button {
   width: 23.4rem;
   height: 24rem;
   object-fit: cover;
+  cursor: pointer;
 }
 .productImages {
   display: flex;
@@ -136,6 +145,8 @@ button {
   border: 2px solid hsl(26, 100%, 55%);
   border-radius: 0.9rem;
 }
+/* 
+*/
 /* TEXT SECTION */
 .text-section {
 }
@@ -194,4 +205,108 @@ button {
 }
 .add-cart-btn:hover {
   opacity: 0.6;
+}
+
+/* 
+*/
+/* 
+ */
+/*  LightBox */
+.lightbox {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.8);
+  display: none;
+  justify-content: center;
+  padding-top: 4.5rem;
+}
+.lightbox-Container {
+  max-width: 35rem;
+}
+.btn-closeCon {
+  display: flex;
+  justify-content: flex-end;
+  align-items: top;
+  padding-bottom: 1rem;
+  padding-right: 1rem;
+}
+.btn-close {
+  cursor: pointer;
+  height: 1.3rem;
+  transition: filter 0.3s ease;
+  filter: brightness(0) invert(1);
+}
+.btn-close:hover {
+  filter: brightness(0) saturate(100%) invert(58%) sepia(100%) saturate(600%)
+    hue-rotate(345deg);
+}
+.lightboxSlider {
+  position: relative;
+}
+.lightboxMain-image {
+  width: 27rem;
+  height: 26rem;
+  border-radius: 0.9rem;
+  object-fit: cover;
+}
+.btn {
+  background-color: hsl(0, 0%, 100%);
+  border-radius: 50%;
+  padding: 1rem;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 99999;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.btn:hover .icon {
+  filter: brightness(0) saturate(100%) invert(58%) sepia(100%) saturate(600%)
+    hue-rotate(345deg);
+}
+.btn-previous {
+  left: 0;
+  transform: translate(-50%, -50%);
+}
+.btn-next {
+  right: 0;
+  transform: translate(50%, -50%);
+}
+.lightboxthumbnailImages {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1.2rem;
+  padding-top: 1.4rem;
+}
+.lightboxImg-box {
+  background-color: hsl(223, 64%, 98%);
+  border-radius: 0.9rem;
+  width: 5rem;
+  height: 4.5rem;
+}
+.lightboxImg-box:focus {
+  outline: none;
+}
+.lightboxthumbnail-image {
+  width: 5rem;
+  height: 4.5rem;
+  border-radius: 0.9rem;
+  object-fit: cover;
+  cursor: pointer;
+}
+.lightboxthumbnail-image:hover {
+  opacity: 0.4;
+}
+.lightboxImg-active {
+  opacity: 0.4;
+}
+.lightboxImg-active-border {
+  border: 2px solid hsl(26, 100%, 55%);
+  border-radius: 0.9rem;
 }
