@@ -73,6 +73,16 @@ button {
   background-color: white;
   text-align: center;
 }
+.nav-btn p {
+  position: absolute;
+  top: 1rem;
+  margin-left: 0.6rem;
+  z-index: 3;
+  background-color: hsl(26, 100%, 55%);
+  color: hsl(223, 64%, 98%);
+  width: 1.3rem;
+  border-radius: 0.9rem;
+}
 .cart-img {
   height: 1.2rem;
   width: 1.2rem;
@@ -90,6 +100,76 @@ button {
   border-radius: 50%;
 }
 
+/* 
+*/
+/* 
+ */
+/* Cart */
+.cart {
+  position: fixed;
+  width: 22rem;
+  min-height: 13rem;
+  right: 5rem;
+  top: 5.5rem;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+  background-color: hsl(0, 0%, 100%);
+  border-radius: 0.9rem;
+  display: none;
+}
+.cart h3 {
+  padding: 0.2rem 0 1.1rem 1.2rem;
+  border-bottom: 1px solid hsl(220, 14%, 75%);
+}
+.emptyCart {
+  color: hsl(219, 9%, 45%);
+  text-align: center;
+  padding-top: 2.5rem;
+}
+.cartInfo {
+  display: grid;
+  grid-template-columns: 3rem 1fr 2rem;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 0.3rem;
+}
+
+.cartSec-img {
+  width: 3rem;
+  height: 3rem;
+  justify-self: flex-start;
+  padding-left: 0.3rem;
+}
+.cartInfo p {
+  font-size: 0.8rem;
+  justify-self: center;
+  padding-left: 0.3rem;
+  line-height: 1.5;
+}
+.total-price {
+  font-weight: 700;
+  font-size: 1rem;
+}
+.delete-img {
+  cursor: pointer;
+  justify-self: end;
+  padding-right: 0.7rem;
+}
+.cart button {
+  background-color: hsl(26, 100%, 55%);
+  width: 20rem;
+  height: 3rem;
+  border-radius: 0.5rem;
+  padding: 0.2rem 0.7rem;
+  font-size: 1rem;
+  color: hsl(0, 0%, 0%);
+  font-weight: 700;
+  text-align: center;
+  margin: 0.5rem 1rem;
+  transition: 0.8s all ease;
+}
+.cart button:hover {
+  opacity: 0.5;
+}
 /* 
 */
 /* 
@@ -134,6 +214,7 @@ Image Section
   border-radius: 0.9rem;
   object-fit: cover;
   cursor: pointer;
+  transition: 0.8s all ease;
 }
 .product-image:hover {
   opacity: 0.4;
@@ -185,6 +266,7 @@ Image Section
 }
 .purchase-no img {
   cursor: pointer;
+  transition: 0.8s all ease;
 }
 .purchase-no img:hover {
   opacity: 0.6;
@@ -199,6 +281,7 @@ Image Section
   color: hsl(0, 0%, 0%);
   font-weight: 700;
   text-align: center;
+  transition: 0.8s all ease;
 }
 .add-cart-btn img {
   height: 1rem;
@@ -222,6 +305,7 @@ Image Section
   display: none;
   justify-content: center;
   padding-top: 4.5rem;
+  z-index: 100;
 }
 .lightbox-Container {
   max-width: 35rem;
@@ -238,6 +322,7 @@ Image Section
   height: 1.3rem;
   transition: filter 0.3s ease;
   filter: brightness(0) invert(1);
+  transition: 0.8s all ease;
 }
 .btn-close:hover {
   filter: brightness(0) saturate(100%) invert(58%) sepia(100%) saturate(600%)
@@ -299,6 +384,7 @@ Image Section
   border-radius: 0.9rem;
   object-fit: cover;
   cursor: pointer;
+  transition: 0.8s all ease;
 }
 .lightboxthumbnail-image:hover {
   opacity: 0.4;

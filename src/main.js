@@ -128,3 +128,91 @@ lightboxThumbnailBox.forEach((box, index) => {
 //   });
 // });
 //  // //
+
+////////////////////////////////////////////
+/////////////////////////
+/// CART
+const cartIcon = document.querySelector('.cart-img');
+const cart = document.querySelector('.cart');
+const cartInfoCon = document.querySelector('.cartINfoCon');
+const addToCartBtn = document.querySelector('.add-cart-btn');
+const numOnCart = document.querySelector('.productNoCart');
+
+cartIcon.addEventListener('click', (e) => {
+  e.stopPropagation();
+  cart.style.display = 'block';
+});
+
+window.addEventListener('click', (e) => {
+  if (
+    cart.style.display === 'block' &&
+    !cart.contains(e.target) &&
+    !addToCartBtn.contains(e.target) &&
+    !numOnCart.contains(e.target)
+  )
+    cart.style.display = 'none';
+});
+
+const AddToCartDetails = function (data) {
+  return `
+   <div class="cartInfo">
+            <img
+              src="${data.img}"
+              alt="cart-img"
+              class="cartSec-img"
+            />
+            <p>
+              ${data.tittle} <br />
+              $${data.price}.00 x <span class="cart-no">${data.qrt}</span>
+              <span class="total-price">$${data.total}.00</span>
+            </p>
+            <img
+              src="./images/icon-delete.svg"
+              alt="delete-image"
+              class="delete-img"
+            />
+          </div>
+          <button>Checkout</button>
+  `;
+};
+
+addToCartBtn.addEventListener('click', (e) => {
+  e.stopPropagation();
+
+  cart.style.display = 'block';
+
+  const qrt = Number(number.textContent);
+
+  if (qrt > 0) {
+    const cartData = {
+      tittle: 'Fall Limited Edition Sneakers',
+      price: 125,
+      qrt: Number(number.textContent),
+      total: 125 * qrt,
+      img: './images/image-product-1-thumbnail.jpg',
+    };
+
+    cartInfoCon.innerHTML = AddToCartDetails(cartData);
+    updateCartBadge(qrt);
+  } else {
+    cartInfoCon.innerHTML = `<p class='emptyCart'>Your Cart is empty</p>`;
+    updateCartBadge();
+  }
+});
+
+cartInfoCon.addEventListener('click', (e) => {
+  if (e.target.classList.contains('delete-img')) {
+    cart.style.display = 'none';
+
+    cartInfoCon.innerHTML = `<p class='emptyCart'>Your Cart is empty</p>`;
+
+    number.textContent = 0;
+
+    updateCartBadge();
+  }
+});
+
+const updateCartBadge = function (no) {
+  if (number.textContent === 0) numOnCart.textContent = '';
+  else numOnCart.textContent = no;
+};
