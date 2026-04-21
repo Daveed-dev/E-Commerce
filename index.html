@@ -22,29 +22,41 @@
     <!--  -->
     <!-- NAVBAR Section -->
     <nav class="navbar">
-      <div class="nav-left">
-        <h2>sneakers</h2>
-        <ul class="nav-links">
-          <li><a class="nav-link" href="#">Collections</a></li>
-          <li><a class="nav-link" href="#">Men</a></li>
-          <li><a class="nav-link" href="#">Women</a></li>
-          <li><a class="nav-link" href="#">About</a></li>
-          <li><a class="nav-link" href="#">Contact</a></li>
-        </ul>
-      </div>
-      <div class="nav-right">
-        <button class="nav-btn">
-          <img src="./images/icon-cart.svg" alt="Icon-Cart" class="cart-img" />
-          <p class="productNoCart"></p>
-        </button>
-        <button class="nav-profile">
-          <img
-            src="./images/image-avatar.png"
-            alt="image avatar"
-            class="avatar-img"
-          />
-        </button>
-      </div>
+      <section class="navCon">
+        <div class="nav-left">
+          <img src="./images/icon-menu.svg" alt="menu" class="menu-btn" />
+          <img src="./images/logo.svg" alt="logo" class="product-logo" />
+          <ul class="nav-links">
+            <img
+              src="./images/icon-close.svg"
+              alt="close-btn"
+              class="mobileClose-btn"
+            />
+            <li><a class="nav-link" href="#">Collections</a></li>
+            <li><a class="nav-link" href="#">Men</a></li>
+            <li><a class="nav-link" href="#">Women</a></li>
+            <li><a class="nav-link" href="#">About</a></li>
+            <li><a class="nav-link" href="#">Contact</a></li>
+          </ul>
+        </div>
+        <div class="nav-right">
+          <button class="nav-btn">
+            <img
+              src="./images/icon-cart.svg"
+              alt="Icon-Cart"
+              class="cart-img"
+            />
+            <p class="productNoCart"></p>
+          </button>
+          <button class="nav-profile">
+            <img
+              src="./images/image-avatar.png"
+              alt="image avatar"
+              class="avatar-img"
+            />
+          </button>
+        </div>
+      </section>
     </nav>
 
     <!--  -->
@@ -64,11 +76,24 @@
     <!-- Product Section -->
     <div class="product-container">
       <section class="img-section">
-        <img
-          src="./images/image-product-1.jpg"
-          alt="Product Image"
-          class="productMain-image"
-        />
+        <div class="img-wra">
+          <img
+            src="./images/image-product-1.jpg"
+            alt="Product Image"
+            class="productMain-image"
+          />
+          <div class="mobilebtn-previous mobile-btn">
+            <img
+              src="./images/icon-previous.svg"
+              alt="btn-previous"
+              class="icon"
+            />
+          </div>
+          <div class="mobilebtn-next mobile-btn">
+            <img src="./images/icon-next.svg" alt="btn-next" class="icon" />
+          </div>
+        </div>
+
         <div class="productImages">
           <button class="img-box img-active-border">
             <img
@@ -112,8 +137,10 @@
           Featuring a durable rubber outer sole, they’ll withstand everything
           the weather can offer.
         </p>
-        <h1>$125.00 <span>50%</span></h1>
-        <p class="price">$250.00</p>
+        <fig class="product-prices">
+          <h1>$125.00 <span>50%</span></h1>
+          <p class="price">$250.00</p>
+        </fig>
         <fig class="product-btns">
           <div class="purchase-no">
             <img

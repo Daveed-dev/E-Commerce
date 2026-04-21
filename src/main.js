@@ -1,3 +1,6 @@
+// MOBILE
+const isMobile = window.matchMedia('(max-width: 500px)').matches;
+
 // Number of Product
 const plus = document.querySelector('.image-plus');
 const minus = document.querySelector('.image-minus');
@@ -54,11 +57,20 @@ const lightboxThumbnailBox = document.querySelectorAll('.lightboxImg-box');
 const btnNext = document.querySelector('.btn-next');
 const btnPrev = document.querySelector('.btn-previous');
 
+// // /// //// ///// //
+// Mobile Slider variable
+// // /// /////
+const productMainImg = document.querySelector('.productMain-image');
+const productImg = document.querySelectorAll('.product-image');
+///////////////////////////
+///////////////////////////\
+
 closeBtn.addEventListener('click', () => {
   lightbox.style.display = 'none';
 });
 
 mainImage.addEventListener('click', () => {
+  if (isMobile) return;
   lightbox.style.display = 'grid';
   goToSlide(curSlide);
 });
@@ -74,9 +86,9 @@ function goToSlide(index) {
   curSlide = index;
 
   const newImage = lightboxThumbnailImage[curSlide].getAttribute('data-src');
+  const newImage2 = productImg[curSlide].getAttribute('data-src');
   lightboxMainImage.src = newImage;
-
-  console.log(curSlide);
+  productMainImg.src = newImage2;
 
   lightboxThumbnailImage.forEach((img) =>
     img.classList.remove('lightboxImg-active'),
@@ -216,3 +228,26 @@ const updateCartBadge = function (no) {
   if (number.textContent === 0) numOnCart.textContent = '';
   else numOnCart.textContent = no;
 };
+
+////////////////////////  ///////////////////////////
+////////////////////////  ///////////////////////////
+////////////////////////  ///////////////////////////
+////////////////////////  ///////////////////////////
+// /////////////////////
+//  MOBILE LAYOUT
+const mobileNavClose = document.querySelector('.mobileClose-btn');
+const menuBtn = document.querySelector('.menu-btn');
+const navLinks = document.querySelector('.nav-links');
+
+const mobileBtnNext = document.querySelector('.mobilebtn-next');
+const mobileBtnPre = document.querySelector('.mobilebtn-previous');
+
+mobileNavClose.addEventListener('click', () => {
+  navLinks.classList.remove('active');
+});
+menuBtn.addEventListener('click', () => {
+  navLinks.classList.add('active');
+});
+
+mobileBtnNext.addEventListener('click', () => goToSlide(curSlide + 1));
+mobileBtnPre.addEventListener('click', () => goToSlide(curSlide - 1));
