@@ -266,7 +266,8 @@ button {
 }
 .cart button {
   background-color: var(--clOrange);
-  width: 20rem;
+  width: 95%;
+  margin: 0.5rem;
   height: 3rem;
   border-radius: 0.5rem;
   padding: 0.2rem 0.7rem;
@@ -274,7 +275,6 @@ button {
   color: hsl(0, 0%, 0%);
   font-weight: 700;
   text-align: center;
-  margin: 0.5rem 1rem;
   transition: 0.8s all ease;
 }
 .cart button:hover {
@@ -298,6 +298,10 @@ button {
     right: 1rem;
     top: 4.5rem;
     width: auto;
+  }
+  .cart button {
+    width: auto;
+    margin: 0.5rem;
   }
 }
 /* 
