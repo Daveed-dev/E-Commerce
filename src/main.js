@@ -151,18 +151,19 @@ const addToCartBtn = document.querySelector('.add-cart-btn');
 const numOnCart = document.querySelector('.productNoCart');
 
 cartIcon.addEventListener('click', (e) => {
+  e.stopPropagation();
   cart.style.display = cart.style.display === 'none' ? 'block' : 'none';
 });
 
-// window.addEventListener('click', (e) => {
-//   if (
-//     cart.style.display === 'block' &&
-//     !cart.contains(e.target) &&
-//     !addToCartBtn.contains(e.target) &&
-//     !numOnCart.contains(e.target)
-//   )
-//     cart.style.display = 'none';
-// });
+window.addEventListener('click', (e) => {
+  if (
+    cart.style.display === 'block' &&
+    !cart.contains(e.target) &&
+    !addToCartBtn.contains(e.target) &&
+    !numOnCart.contains(e.target)
+  )
+    cart.style.display = 'none';
+});
 
 const AddToCartDetails = function (data) {
   return `
