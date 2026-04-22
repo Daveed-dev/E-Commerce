@@ -1,11 +1,22 @@
 @import url('https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght,YOPQ@100..900,300&family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&family=Source+Code+Pro:ital,wght@0,200..900;1,200..900&display=swap');
 
+:root {
+  --clOrange: hsl(26, 100%, 55%);
+  --paleOrange: hsl(25, 100%, 94%);
+  --clWhite: hsl(0, 0%, 100%);
+  --grayishBlue: hsl(220, 14%, 75%);
+  --lightgrayishBlue: hsl(223, 64%, 98%);
+  --darkgrayishBlue: hsl(219, 9%, 45%);
+  --clBlack: hsl(0, 0%, 0%);
+  --darkBlue: hsl(220, 13%, 13%);
+}
+
 body {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
   font-family: 'Source Code Pro', monospace;
-  background-color: white;
+  background-color: var(--clWhite);
 }
 h1,
 h2,
@@ -36,8 +47,8 @@ button {
   justify-content: space-between;
   align-items: center;
   gap: 1rem;
-  background-color: white;
-  border-bottom: 1px solid hsl(220, 14%, 75%);
+  background-color: var(--clWhite);
+  border-bottom: 1px solid var(--grayishBlue);
 }
 .nav-left {
   display: flex;
@@ -62,11 +73,11 @@ button {
 .nav-link {
   margin: 0 1rem;
   text-decoration: none;
-  color: hsl(219, 9%, 45%);
+  color: var(--darkgrayishBlue);
   padding-bottom: 2.2rem;
 }
 .nav-link:hover {
-  border-bottom: 3px solid hsl(26, 100%, 55%);
+  border-bottom: 3px solid var(--clOrange);
 }
 .nav-right {
   display: flex;
@@ -75,7 +86,7 @@ button {
 }
 .nav-btn {
   border: none;
-  background-color: white;
+  background-color: var(--clWhite);
   text-align: center;
 }
 .productNoCart {
@@ -83,8 +94,8 @@ button {
   bottom: 1rem;
   margin-left: 0.6rem;
   z-index: 3;
-  background-color: hsl(26, 100%, 55%);
-  color: hsl(223, 64%, 98%);
+  background-color: var(--clOrange);
+  color: var(--lightgrayishBlue);
   width: 1.3rem;
   border-radius: 0.9rem;
 }
@@ -101,7 +112,7 @@ button {
   cursor: pointer;
 }
 .avatar-img:hover {
-  border: 2px solid hsl(26, 100%, 55%);
+  border: 2px solid var(--clOrange);
   border-radius: 50%;
 }
 
@@ -137,7 +148,7 @@ button {
     justify-content: space-between;
     align-items: center;
     gap: 3rem;
-    background-color: hsl(0, 0%, 100%);
+    background-color: var(--clWhite);
     z-index: 5;
     margin: 0;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
@@ -164,7 +175,7 @@ button {
     position: fixed;
     top: 0;
     left: 0;
-    background-color: hsl(0, 0%, 100%);
+    background-color: var(--clWhite);
     height: 100%;
     width: 13rem;
     padding-left: 3rem;
@@ -210,17 +221,17 @@ button {
   right: 5rem;
   top: 5.5rem;
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
-  background-color: hsl(0, 0%, 100%);
+  background-color: var(--clWhite);
   border-radius: 0.9rem;
   display: none;
   z-index: 10;
 }
 .cart h3 {
   padding: 0.2rem 0 1.1rem 1.2rem;
-  border-bottom: 1px solid hsl(220, 14%, 75%);
+  border-bottom: 1px solid var(--grayishBlue);
 }
 .emptyCart {
-  color: hsl(219, 9%, 45%);
+  color: var(--darkgrayishBlue);
   text-align: center;
   padding-top: 2.5rem;
 }
@@ -254,7 +265,7 @@ button {
   padding-right: 0.7rem;
 }
 .cart button {
-  background-color: hsl(26, 100%, 55%);
+  background-color: var(--clOrange);
   width: 20rem;
   height: 3rem;
   border-radius: 0.5rem;
@@ -342,7 +353,7 @@ Image Section
   opacity: 0.4;
 }
 .img-active-border {
-  border: 2px solid hsl(26, 100%, 55%);
+  border: 2px solid var(--clOrange);
   border-radius: 0.9rem;
 }
 .mobile-btn {
@@ -353,14 +364,14 @@ Image Section
 /* TEXT SECTION */
 
 .text-section p {
-  color: hsl(219, 9%, 45%);
+  color: var(--darkgrayishBlue);
 }
 .product-text {
   padding: 0.6rem 0;
 }
 .text-section span {
-  color: hsl(0, 0%, 100%);
-  background-color: hsl(0, 0%, 0%);
+  color: var(--clWhite);
+  background-color: var(--clBlack);
   font-size: 1rem;
   padding: 0.2rem 0.5rem;
   border-radius: 0.3rem;
@@ -374,7 +385,7 @@ Image Section
   gap: 1rem;
 }
 .purchase-no {
-  background-color: hsl(223, 64%, 98%);
+  background-color: var(--lightgrayishBlue);
   display: grid;
   grid-template-columns: repeat(3, 2rem);
   justify-content: space-between;
@@ -393,13 +404,13 @@ Image Section
   opacity: 0.6;
 }
 .add-cart-btn {
-  background-color: hsl(26, 100%, 55%);
+  background-color: var(--clOrange);
   width: 16rem;
   height: 3rem;
   border-radius: 0.5rem;
   padding: 0.2rem 0.7rem;
   font-size: 1rem;
-  color: hsl(0, 0%, 0%);
+  color: var(--clBlack);
   font-weight: 700;
   text-align: center;
   transition: 0.8s all ease;
@@ -460,7 +471,7 @@ Image Section
   }
   .mobile-btn {
     position: absolute;
-    background-color: hsl(0, 0%, 100%);
+    background-color: var(--clWhite);
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
@@ -561,7 +572,7 @@ Image Section
   object-fit: cover;
 }
 .btn {
-  background-color: hsl(0, 0%, 100%);
+  background-color: var(--clWhite);
   border-radius: 50%;
   padding: 1rem;
   position: absolute;
@@ -593,7 +604,7 @@ Image Section
   padding-top: 1.4rem;
 }
 .lightboxImg-box {
-  background-color: hsl(223, 64%, 98%);
+  background-color: var(--lightgrayishBlue);
   border-radius: 0.9rem;
   width: 5rem;
   height: 4.5rem;
@@ -616,6 +627,6 @@ Image Section
   opacity: 0.4;
 }
 .lightboxImg-active-border {
-  border: 2px solid hsl(26, 100%, 55%);
+  border: 2px solid var(--clOrange);
   border-radius: 0.9rem;
 }
