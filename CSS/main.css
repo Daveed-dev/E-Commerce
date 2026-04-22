@@ -515,12 +515,11 @@ Image Section
     display: block;
   }
   .purchase-no {
-    width: 95%;
+    width: auto;
     margin-bottom: 0.8rem;
   }
   .add-cart-btn {
-    width: 98%;
-    margin: 0;
+    width: 100%;
     margin-bottom: 0.8rem;
   }
 }
